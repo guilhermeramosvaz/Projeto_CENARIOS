@@ -1,2 +1,2 @@
-Notar que nos dados do frigorificos apresenta um link apenas. Ele correspode a todas as fontes ou apenas a aquela? Deveriamos ter os dados todos abertos?
-
+- Notar que nos dados do frigorificos apresenta um link apenas. Ele correspode a todas as fontes ou apenas a aquela? Deveriamos ter os dados todos abertos?
+- Idade da pastagem foi gerada com um script no colab, teria que ter um link puxando no caso para a parte em que o processo acontece ou deve ter uma explicação e continuar apontando para a base de dados?
