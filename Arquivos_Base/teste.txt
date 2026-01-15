@@ -1,0 +1,2 @@
+Notar que nos dados do frigorificos apresenta um link apenas. Ele correspode a todas as fontes ou apenas a aquela? Deveriamos ter os dados todos abertos?
+
