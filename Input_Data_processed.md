@@ -4,6 +4,7 @@
 
 Este arquivo contém a relação de todas as variáveis utilizadas no processamento, seus tipos de dados e links para download no Google Drive.
 
+---
 </div>
 
 <br>

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ##juntar os arquivos na ordem certa dos valores das bandas (3,2,1)
 gdalbuildvrt ut.vrt \
     quilombos.tif assentamentos.tif areasprivadas.tif areaspublicas.tif &&\

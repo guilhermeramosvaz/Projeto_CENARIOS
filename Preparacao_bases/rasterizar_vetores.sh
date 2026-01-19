@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "Iniciando o processamento..."
 ##Para rodar o codigo e necessario ter o vetor bem definido
 ##Rasterizar o dado (precisa do vetor das estradas com 1 campo de valores 1)

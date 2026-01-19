@@ -1,56 +1,56 @@
 #!/bin/bash
 
-echo " Iniciando a criaco de VRTs para todos os arquivos .tif..."
+echo " Starting VRT creation for all .tif files..."
 
-# Define os parametros fixos em variaveis para facilitar a leitura e modificacao
+# Define fixed parameters in variables for easier reading and modification
 EXTENT="-1522408.308 822132.912 2078491.692 4209762.912"
 RESOLUTION="30 30"
 
-# O loop 'for' vai iterar sobre cada arquivo que termina com .tif
+# The 'for' loop will iterate over each file ending in .tif
 for ARQUIVO_TIF in *.tif; do
   
-  # Gera o nome do arquivo de saida .vrt a partir do nome do .tif
-  # Ex: de "lulc.tif" para "lulc.vrt"
+  # Generate the output .vrt filename from the .tif filename
+  # Ex: from "lulc.tif" to "lulc.vrt"
   ARQUIVO_VRT="${ARQUIVO_TIF%.tif}_entrada.vrt"
   
-  echo "Processando: ${ARQUIVO_TIF}  ->  Criando: ${ARQUIVO_VRT}"
+  echo "Processing: ${ARQUIVO_TIF}  ->  Creating: ${ARQUIVO_VRT}"
 
-  # Executa o comando gdalbuildvrt
-  # As aspas em volta das variaveis de arquivo sao MUITO importantes
-  # para que nomes com espacos ou caracteres especiais funcionem corretamente.
+  # Execute the gdalbuildvrt command
+  # Quotes around file variables are VERY important
+  # to ensure filenames with spaces or special characters work correctly.
   gdalbuildvrt "${ARQUIVO_VRT}" \
       -te ${EXTENT} \
       -tr ${RESOLUTION} \
       "${ARQUIVO_TIF}"
 done
 
-echo "Criacao de VRTs finalizada com sucesso!"
+echo "VRT creation finished successfully!"
 
-echo " Iniciando a conversao final de VRT para GeoTIFF otimizado..."
+echo " Starting final conversion from VRT to optimized GeoTIFF..."
 
 EXTENT="-1522408.308 822132.912 2078491.692 4209762.912"
 RESOLUTION="30 30"
 
-# Opocoes de criacao para o GeoTIFF de saida.
-# Agrupadas em uma variavel para facilitar a leitura.
-# - TILED=YES: Melhora a performance de leitura em softwares GIS.
-# - COMPRESS=LZW: Compressao sem perdas para economizar espaco.
-# - BIGTIFF=YES: Permite que os arquivos de saida sejam maiores que 4GB.
+# Creation options for the output GeoTIFF.
+# Grouped in a variable for easier reading.
+# - TILED=YES: Improves reading performance in GIS software.
+# - COMPRESS=LZW: Lossless compression to save space.
+# - BIGTIFF=YES: Allows output files to be larger than 4GB.
 CREATION_OPTIONS="-multi -wo NUM_THREADS=4 -t_srs ESRI:102033 -srcnodata 0 -co TILED=YES -co COMPRESS=LZW -co BIGTIFF=YES"
 
-# O loop 'for' vai iterar sobre cada arquivo que termina com .vrt
+# The 'for' loop will iterate over each file ending in .vrt
 for ARQUIVO_VRT in *.vrt; do
   
-  # Define um nome para o arquivo de saida, adicionando "_final" no final.
-  # Isso e IMPORTANTE para nao sobrescrever os seus arquivos .tif originais!
-  # Ex: de "slope30.vrt" para "slope30_final.tif"
+  # Define a name for the output file, adding "_final" at the end.
+  # This is IMPORTANT to avoid overwriting your original .tif files!
+  # Ex: from "slope30.vrt" to "slope30_final.tif"
   ARQUIVO_TIF_FINAL="${ARQUIVO_VRT%.vrt}_final.tif"
   
-  echo "Processando: ${ARQUIVO_VRT}  ->  Criando: ${ARQUIVO_TIF_FINAL}"
+  echo "Processing: ${ARQUIVO_VRT}  ->  Creating: ${ARQUIVO_TIF_FINAL}"
 
-  # Executa o gdal_translate com as opcoes de criacao.
-  # As aspas em volta dos nomes dos arquivos garantem que tudo funcione
-  # mesmo que haja espacos ou caracteres especiais nos nomes.
+  # Execute gdalwarp with the creation options.
+  # Quotes around filenames ensure everything works
+  # even if there are spaces or special characters in the names.
   gdalwarp ${CREATION_OPTIONS} \
     -te ${EXTENT} \
     -tr ${RESOLUTION} \
@@ -59,6 +59,5 @@ for ARQUIVO_VRT in *.vrt; do
 
 done
 
-echo "Conversao para TIFF finalizada com sucesso!"
-echo "Seus novos arquivos alinhados e otimizados foram criados com o sufixo '_final.tif'."
-
+echo "TIFF conversion finished successfully!"
+echo "Your new aligned and optimized files have been created with the '_final.tif' suffix."

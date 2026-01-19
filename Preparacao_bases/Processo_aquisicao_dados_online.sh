@@ -1,4 +1,6 @@
-Processo de aquisicao de dados de short vegetation paralelizado
+#!/bin/bash
+
+echo "Processo de aquisicao de dados de short vegetation paralelizado"
 
 parallel -j3 "
     gdal_translate --config GDAL_HTTP_UNSAFESSL YES \
@@ -7,4 +9,5 @@ parallel -j3 "
     /home/guilherme/Documentos/resultadosCENARIOS/gpw_AmaCerrPan_short_veg_height_lgb_{1}.tif \
     -co COMPRESS=LZW \
     -co TILED=YES \
-    -co BIGTIFF=YES" ::: 2013 2018 2022
+    -co BIGTIFF=YES 
+    " ::: 2013 2018 2022

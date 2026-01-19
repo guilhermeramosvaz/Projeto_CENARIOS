@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "Iniciando o processamento..."
+echo "Starting processing..."
 
-##Para rodar o codigo e necessario ter o vetor bem definido
-##Rasterizar o dado (precisa do vetor das estradas com 1 campo de valores 1)
+## A well-defined vector file is required to run the code
+## Rasterize the data (requires a vector with an attribute field containing the value 1)
 gdal_rasterize -l quilombos \
     -a rasterizar \
     -ot UInt16 \
@@ -48,18 +48,18 @@ gdal_rasterize -l areaspublicas \
     areaspublicas.shp \
     areaspublicas.tif && \
 
-##juntar os arquivos na ordem certa dos valores das bandas (3,2,1)
+## Combine files into a VRT in the correct band order
 gdalbuildvrt ut.vrt \
-    quilombos.tif assentamentos.tif areasprivadas.tif areaspublicas.tif &&\
+    quilombos.tif assentamentos.tif areasprivadas.tif areaspublicas.tif && \
 
-##transformar em raster
+## Convert VRT to GeoTIFF raster
 gdal_translate ut.vrt \
     -co COMPRESS=LZW \
     -co TILED=YES \
     -co BIGTIFF=YES \
     ut.tif && \
 
-##Redimensionar para 30 metros
+## Resample/Resize to 30-meter resolution
 gdalwarp -tr 30 30 \
     -r near \
     ut.tif \
@@ -68,7 +68,7 @@ gdalwarp -tr 30 30 \
     -co TILED=YES \
     -co BIGTIFF=YES && \
 
-##Piramidar para a visualizacao
+## Build overviews (pyramids) for faster visualization
 gdaladdo unidadesterritoriais.tif 2 4 8
 
-echo "Processamento concluido!"
+echo "Processing completed!"
