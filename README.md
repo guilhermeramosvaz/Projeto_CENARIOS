@@ -1,4 +1,4 @@
-# Projeto_CENARIOS
+## Projeto_CENARIOS
 
 <img width="800" height="800" alt="PROJETO CENARIOS (2)" src="https://github.com/user-attachments/assets/2c7d8c21-fec4-4657-b001-8357ebad1cb7" />
 
@@ -10,3 +10,13 @@ This repository contains the following:
 - Data: [Input spatial data](Input_Data.md)
 - Model: Dinamica EGO model and required sub-models
 - Scripts: [R, JavaScript, Python, Shell scripts](Preparacao_bases)
+
+<br>
+
+## Workflow
+
+<div align="center">
+    <img src="figures/processo_de_operacionalizacao.png" width="80%" alt="Processo de Operacionalização">
+    <p><i>Figura 1: Fluxo de trabalho para o processamento de dados geográficos.</i></p>
+</div>
+
