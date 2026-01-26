@@ -37,7 +37,7 @@ This repository contains the (following <a name= "following"></a>):
 ## Workflow
 
 <div align="center">
-    <img src="figures/Processo_de_operacionalizacao.svg" width="75%" alt="Processo de Operacionalização">
+    <img src="figures/processo_de_operacionalizacao.svg" width="75%" alt="Processo de Operacionalização">
     <p><i>Figura 2: Input database process.</i></p>
 </div>
 
