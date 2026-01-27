@@ -1,7 +1,7 @@
 <h2 align="center">Regionalization Methodology</h2>
 
 <div align="center">
-    <img src="Figures/Infografico.png" width="50%" alt="Infografico">
+    <img src="Figures/Infografico.png" width="50%" alt="">
     <p><i>Figure 1: Infographic</i></p>
 </div>
 
