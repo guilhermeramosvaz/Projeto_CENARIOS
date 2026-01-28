@@ -26,8 +26,8 @@
 
 This repository contains the (following <a name= "following"></a>):
 - Data: [Input spatial data](Input_Data.md)
-- Model: [Dinamica EGO model and required sub-models](model)
-- Scripts: [R, JavaScript, Python, Shell scripts](scripts)
+- Model: [Dinamica EGO model and required sub-models](Model_DinamicaEGO)
+- Scripts: [R, JavaScript, Python, Shell scripts](Scripts)
 
 <br>
 
