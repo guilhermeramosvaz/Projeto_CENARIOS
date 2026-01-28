@@ -44,3 +44,4 @@ This repository contains the (following <a name= "following"></a>):
 |:---:|:---:|
 |This research was supported by LaMCAD/UFG| <img src="Figures/LaMCAD_PRETO.svg" width="30%" alt="Processo de Operacionalização"> |
 |This research was supported by LAPIG/UFG| <img src="Figures/LogoLapigPNGcDescricao.png" width="25%" alt="Processo de Operacionalização"> |
+|This research was supported by TNC| <img src="Figures/tnc-logo-primary-registered-dark-text.svg" width="30%" alt="Processo de Operacionalização"> |
