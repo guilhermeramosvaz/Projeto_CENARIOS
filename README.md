@@ -18,7 +18,7 @@
 ## Introduction <a name="introduction"></a>
 
 <div align="justify">
-    The Project's central objective was to project scenarios of agricultural intensification and remnant conservation, simulating future deforestation in the Amazon, Cerrado, and Pantanal biomes as a function of pasture and soy expansion. Concurrently, the analysis of avoided deforestation was one of the goals for understanding the dynamics that drive land-use transitions. This is a joint initiative between the Image Processing and Geoprocessing Laboratory (LAPIG - UFG) and The Nature Conservancy.
+    The project’s central objective was to model scenarios of agricultural intensification and remnant conservation, simulating future deforestation in the Amazon, Cerrado, and Pantanal biomes as a function of pasture and soy expansion. Additionally, the analysis of avoided deforestation was a key goal for understanding the dynamics driving land-use transitions. This project is a joint initiative between the Image Processing and Geoprocessing Laboratory (LAPIG–UFG) and The Nature Conservancy.
 </div>
 
 <br> 
