@@ -2,7 +2,6 @@
 
 <div align="center">
     <img src="Figures/proj_cenarios_v2.png" width="80%" alt="Processo de Operacionalização">
-    <p><i>Figura 1: Input database process.</i></p>
 </div>
 
 ***
