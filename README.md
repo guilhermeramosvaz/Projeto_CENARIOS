@@ -45,7 +45,7 @@ This repository contains the following:
 ## Workflow
 
 <div align="center">
-    <img src="Figures/processo_de_operacionalizacao.svg" width="75%" alt="Processo de Operacionalização">
+    <img src="Figures/processo_de_operacionalizacao.svg" width="150%" alt="Processo de Operacionalização">
     <p><i>Figura 2: Dinamica EGO process.</i></p>
 </div>
 
