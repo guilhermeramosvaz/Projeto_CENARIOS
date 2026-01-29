@@ -1,5 +1,5 @@
 # Protocol 2 – Spatial Regionalization
-
+![alt text](../Docs/Figures/hexagono_grid.png)
 ## Objective
 This protocol describes the procedure used to define spatially explicit modeling regions based on land use and land cover transitions.
 
@@ -75,9 +75,6 @@ Create a spatial framework that allows consistent aggregation of land use transi
 - Software used:  ArcMap / QGIS
 
 Each hexagon was assigned a unique identifier (ID), which was used as the spatial unit for subsequent analyses.
-
-
-![Hexagonal grid with 20 km cells covering the study area]()
 
 ---
 
@@ -170,4 +167,4 @@ Based on expert knowledge and similarity between adjacent regions, some clusters
 - Attribute table with land use proportions and transition rates
 - Final regionalization map
 
-Outputs are stored in: 
+Outputs were used to cut the input data. 
