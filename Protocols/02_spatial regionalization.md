@@ -1,4 +1,4 @@
-# Protocol 2 – Spatial Regionalization
+# Spatial Regionalization
 ![alt text](../Docs/Figures/hexagono_grid.png)
 ## Objective
 This protocol describes the procedure used to define spatially explicit modeling regions based on land use and land cover transitions.
@@ -45,7 +45,7 @@ The Pantanal biome was included due to its spatial proximity and ecological inte
 ### Land Use Classes of Interest
 | Class Code | Description |
 |----------|-------------|
-| 1 | Native vegetation |
+| 5 | Native vegetation |
 | 15 | Pasture |
 | 39 | Soybean |
 | 21 | Other temporary crops |
