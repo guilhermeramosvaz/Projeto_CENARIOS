@@ -1,7 +1,7 @@
-<h2 align="center"> Scenarios_Project / Projeto_Cenários</h2>
+<h1 align="center"> Scenarios_Project / Projeto_Cenários</h1>
 
 <div align="center">
-    <img src="Figures/proj_cenarios_v2.png" width="80%" alt="Processo de Operacionalização">
+    <img src="Figures/Proj_Cenarios Logo.png" width="80%" alt="Processo de Operacionalização">
 </div>
 
 ***
@@ -53,6 +53,6 @@ This repository contains the following:
 
 | | |
 |:---:|:---:|
-|This research was supported by LaMCAD/UFG| <img src="Figures/LaMCAD_PRETO.svg" width="30%" alt="Processo de Operacionalização"> |
-|This research was supported by LAPIG/UFG| <img src="Figures/LogoLapigPNGcDescricao.png" width="25%" alt="Processo de Operacionalização"> |
-|This research was supported by TNC| <img src="Figures/tnc-logo-primary-registered-dark-text.svg" width="30%" alt="Processo de Operacionalização"> |
+|This research was supported by LaMCAD/UFG| <img src="Figures/LaMCAD_Logo.svg" width="30%" alt="Processo de Operacionalização"> |
+|This research was supported by LAPIG/UFG| <img src="Figures/LAPIG Logo.png" width="25%" alt="Processo de Operacionalização"> |
+|This research was supported by TNC| <img src="Figures/TNC Logo.svg" width="30%" alt="Processo de Operacionalização"> |

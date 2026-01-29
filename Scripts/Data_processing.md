@@ -40,10 +40,10 @@
     A camada de idade de idade da pastagem foi adquirida dos dados pre processados usando o script de <a href="Data_processing/pasture_age.js">idade da pastagem</a> feito no ambiente do google earth engine.
 </div>
 
-[//]:#(rasterizar)
+[//]:#(rasterizar_e_distancia_euclidiana)
 <br>
 <div align="justify">
-    Em casos de dados vetoriais que necessitavam de conversão para raster, foi usando o script de <a href="Data_processing/rasterizar_vetores.sh"> de rasterizar vetores</a> feito no ambiente do google earth engine.
+    Em casos de dados vetoriais que necessitavam de conversão para raster ou calculo de distancia euclidiana foi usando o script de <a href="Data_processing/rasterizar_vetores.sh">rasterizar vetores</a> e apenas para distância euclidiana o script de <a href="Data_processing\Calc_distance.r"> calcular distância</a> em linguagem r.
 </div>
 
 [//]:#(ut_process)
@@ -58,6 +58,19 @@
     No processamento da camada de declividade, foi necessário utilizar dentro do google earth engine os dados do  Modelo Digitam de Elevação (DEM) da Nasa que é um reprocessamento dos dados do SRTM melhorados com os dados do ASTER GDEM, ICESat e PRISM usando o script de <a href="Data_processing/slope.js"> de calculo de declividade</a>.
 </div>
 
+[//]:#(realinhamento)
+<br>
+<div align="justify">
+    Após todas as variáveis serem processadas, era necessário que elas entre si fossem alinhadas entre si para evitar problemas no DinâmicaEGO, foi realizado usando então um script de <a href="Data_processing/Alinhar_raster.ipynb"> realinhamento </a> dentro de uma pasta onde todas as variáveis fossem inseridas
+[//]:#(Recorte_regioes)
+</div>
+
+<br>
+<div align="justify">
+    Após finalizar a preparação das bases de dados, foi necessário para a etapa de <a href="../../Projeto_CENARIOS/Model_DinamicaEGO/About.md"> modelagem </a>, que todos os arquivos fossem recortados por regiões (disponíveis no <a href="https://drive.google.com/drive/folders/1iDu-_7E0YfGVzNwI_gBjPckpnGJd88H3?usp=drive_link"> link</a>). Para isso foi utilizado um script que fosse capaz de realizar o <a href="Data_processing\Variables_cut.py"> recorte por regiões</a>, para recortar as regiões descritas no <a href="../../Projeto_CENARIOS/Regionalization/Methodology.md"> método de regionalização </a>.
+</div>
+
+[//]:#(table_introducao)
 <br>
 <h2 align="justify"> Dicionário de Variáveis e Metadados </h2>
 <div align="justify">
