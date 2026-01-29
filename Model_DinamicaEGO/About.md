@@ -1,8 +1,8 @@
 <h2 align="center">Dinamica EGO Models</h2>
 
-This page contains the core scripts used throughout the spatial land-use and land-cover (LULC) simulation workflow of the project. These scripts form the methodological backbone of the modeling framework implemented in Dinamica EGO.
+This page contains the core scripts used throughout the project’s spatial land-use and land-cover (LULC) simulation workflow. These scripts form the methodological backbone of the modeling framework implemented in Dinamica EGO.
 
-The scripts were consistently applied to all simulated regions, with only region-specific parameters being adjusted. While input datasets and spatial constraints may vary by region, the modeling logic, transition structure, and simulation procedures remain the same.
+The scripts are consistently applied across all simulated regions, with only region-specific parameters adjusted. While input datasets and spatial constraints may vary by region, the modeling logic, transition structure, and simulation procedures remain the same.
 
 <h3 align="left">Scope of the scripts</h3>
 
