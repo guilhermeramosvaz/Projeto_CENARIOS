@@ -49,6 +49,21 @@ Transitions were calculated for consecutive periods:
 
 Transition values were converted to annual rates assuming constant change within the time interval.
 
+The program computes all possible land-use transitions between classes. However, for the simulation, only transitions of specific interest were selected and used in the model, namely:
+
+- Native vegetation (1) → Pasture (15)
+
+- Native vegetation (1) → Soybean (39)
+
+- Native vegetation (1) → Mosaic of uses (21)
+
+- Pasture (15) → Native vegetation (1)
+
+- Pasture (15) → Soybean (39)
+
+- Mosaic of uses (21) → Native vegetation (1)
+
+Mosaic of uses (21) → Soybean (39)
 ---
 
 ##  Time Steps

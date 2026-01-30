@@ -1,4 +1,4 @@
-# Weights of Evidence (WoE) – Calculation, Calibration and Variable Correlation
+# Weights of Evidence (WoE) – Calculation, Calibration and Correlation 
 
 ## Overview
 
@@ -46,40 +46,49 @@ Continuous variables were discretized into intervals prior to WoE calculation.
 
 ## Calibration of Weights
 
-The calibration process aimed to ensure that the estimated weights were statistically consistent and stable. 
+The calibration stage aims to ensure that the Weights of Evidence (WoE) are statistically stable, interpretable, and consistent with the modeled transitions. This step is applied mainly to continuous variables, since Dinamica EGO requires explanatory variables to be represented in categorical form.
 
-Continuous variables were discretized and adjusted to avoid unstable or extreme weight values.
-- Were statistically consistent;
-- Did not present extreme or unstable values;
-- Represented meaningful relationships with the modeled transitions.
+The WoE table contains all transitions of interest and the contribution of each explanatory variable. The definition of meaningful value intervals is performed by the modeler and refined through an iterative calibration process.
 
-The following calibration steps were applied:
-1. Evaluation of weight distributions for each variable and transition;
-2. Removal or aggregation of intervals with low sample size;
-3. Adjustment of class breaks when necessary;
-4. Verification of the expected direction of influence based on knowledge.
+### Calibration Procedure
 
-The process was iterative, with multiple calibration runs performed to refine class intervals, merge classes with low sample size, and reduce unstable or extreme weights.
+- WoE are calculated using distance maps, explanatory variables, and land use and land cover maps from the initial and final time steps.
 
-Only calibrated weights were used to generate transition probability maps.
+- The behavior of WoE values is analyzed through visualization tools (e.g., Power BI) to identify unstable or non-informative intervals.
+
+- Class interval limits (minimum and maximum values) are manually adjusted in Dinamica EGO based on statistical significance and model performance.
+
+- The process is repeated as needed until the weights are considered satisfactory.
+
+Only calibrated weights are used in subsequent modeling steps.
 
 ---
 
 ## Correlation Analysis Between Variables
 
-To avoid redundancy and multicollinearity among explanatory variables, a **pairwise correlation analysis** was performed based on the calculated Weights of Evidence.
+A correlation analysis is performed after calibration to verify the independence assumption of the WoE method and to avoid redundancy among explanatory variables.
 
-The analysis focused on:
-- Correlation between WoE contrasts of different variables
-- Identification of highly correlated variable pairs
-- Assessment of potential double counting of explanatory power
+#### Correlation is evaluated using:
+- Chi-square (χ²)
 
-When high correlation was detected, variable selection followed:
-- Theoretical relevance to the transition
-- Spatial interpretability
-- Stability of weights across transitions
+- Cramér’s V
 
-Highly correlated variables were either excluded or not used simultaneously in the same transition.
+ - Contingency coefficient
+
+ - Entropy
+
+- Joint uncertainty information
+
+#### Correlation values range from:
+
+- 0 → independence
+
+- 1 → maximum association
+
+Values greater than 0.50 are interpreted as high correlation (high dependency) between variables.
+
+When high correlation is detected (**values > 0.50**), only the variable that best explains the transition, considering theoretical relevance, spatial interpretability, and stability of the weights, is retained for modeling.
+
 
 ---
 
@@ -87,25 +96,8 @@ Highly correlated variables were either excluded or not used simultaneously in t
 
 This step generated the following outputs:
 
-- Calibrated Weights of Evidence tables for each transition
-- Reports of excluded or adjusted variables
-- Correlation matrices based on WoE values
-- Final set of explanatory variables selected for each transition
-- Transition probability maps derived from calibrated weights
+- Calibrated Weights of Evidence table for each transition ([`See an example here`](Protocols/01_data_preparation.md));
+- Reports of excluded and adjusted variables;
+- Correlation matrices based on WoE values;
+- Final set of explanatory variables selected for each transition.
 
----
-
-## Outputs Directory Structure
-
-```text
-Weights_of_Evidence/
-├── Raw_WoE/
-│   └── woe_initial_calculation/
-├── Calibrated_WoE/
-│   └── woe_calibrated_tables/
-├── Correlation/
-│   ├── woe_correlation_matrix.csv
-│   └── correlation_report.md
-├── Probability_Maps/
-│   └── transition_probability_maps/
-└── README.md
