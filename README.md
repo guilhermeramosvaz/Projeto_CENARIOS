@@ -6,12 +6,26 @@
 
 ***
 
+## Team
+
+### LAPIG – Laboratório de Processamento de Imagens e Geoprocessamento (UFG)
+- **Marisa de Oliveira Novaes**   
+- **Alessandra Bertassoni**  
+- **Guilherme Ramos Vaz** 
+- **Laerte Guimarães Ferreira**  
+
+### The Nature Conservancy (TNC)
+- **Rafaela Albuquerque**  
+- **Giovanni Mallmann**  
+- **Arley Haley**  
+- **Mario Barroso** 
+
+
 <h2 align="left">Sumary</h2>
 
 - [Introduction ](#introduction-)
 - [Workflow](#workflow)
 - [Acknowledgements](#acknowledgements)
-
 
 ***
 
@@ -53,6 +67,9 @@ This repository contains the following:
 
 | | |
 |:---:|:---:|
-|This research was supported by LaMCAD/UFG| <img src="Docs/Figures/LaMCAD_Logo.svg" width="30%" alt="Processo de Operacionalização"> |
-|This research was supported by LAPIG/UFG| <img src="Docs/Figures/LAPIG Logo.png" width="25%" alt="Processo de Operacionalização"> |
-|This research was supported by TNC| <img src="Docs/Figures/TNC Logo.svg" width="30%" alt="Processo de Operacionalização"> |
+
+|This research was conducted with support from LAPIG/UFG       <img src="Docs/Figures/LAPIG Logo.png" width="25%" alt="Processo de Operacionalização"> 
+
+|This research was conducted with support from TNC  <img src="Docs/Figures/TNC Logo.svg" width="30%" alt="Processo de Operacionalização"> 
+
+|This research was supported by LaMCAD/UFG <img src="Docs/Figures/LaMCAD_Logo.svg" width="30%" alt="Processo de Operacionalização"> 
